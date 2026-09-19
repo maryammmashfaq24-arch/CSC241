@@ -35,3 +35,4 @@ TASK 5 - AIExperimentDemo
   exp2.runEpochs(5, 3)  -> exp2 18/25, exp1 still 10/20
   Remaining: exp1 = 10, exp2 = 7
   trainMore(exp1, 4)    -> exp1 14/20
+   All tasks (1-5) completed and verified. AIExperiment integrated challenge done.
