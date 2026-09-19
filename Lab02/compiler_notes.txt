@@ -1,0 +1,25 @@
+  CSC241 - Lab 02 - compiler_notes.txt
+Name: Maryam Ashfaq        Registration: SP26-BAI-030
+
+1) INVALID OVERLOAD - two methods differing only by return type
+Code attempted inside OverloadDemo.java:
+    void enroll(String courseCode) { ... }
+    int  enroll(String courseCode) { return 0; }
+
+javac message:
+OverloadDemo.java:17: error: method enroll(String) is already defined in class OverloadDemo
+    int enroll(String courseCode) {
+        ^
+1 error
+
+Reason: the return type is NOT part of a method's signature, so both
+methods have the same signature enroll(String) and the compiler cannot
+tell them apart. Fix applied: the int version was removed.
+
+2) INVALID CALLS
+    demo.enroll();
+      error: method enroll in class OverloadDemo cannot be applied to given types;
+             required: String   found: no arguments
+
+    demo.enroll("241", "2");
+      error: incompatible types: String cannot be converted to int

@@ -1,0 +1,37 @@
+CSC241 - Lab 02 - Predictions (written BEFORE compiling and running)
+Name: Maryam Ashfaq        Registration: SP26-BAI-030
+
+TASK 1 - Task1Demo
+  Before change:
+    s1 -> BAI-018, Faiza Shakeel, 30 credits
+    s2 -> BAI-030, Maryam Ashfaq, 45 credits
+    s3 -> BAI-031, Maryam Mumtaz, 60 credits
+  After s2.completedCredits + 15:
+    s1 -> 30 (unchanged)
+    s2 -> 60
+    s3 -> 60 (unchanged)
+
+TASK 2 - Task2Demo
+  s1.addCredits(6)           -> s1 credits 30 becomes 36
+  s2.addCredits(10)          -> s2 credits 45 becomes 55
+  s1.remainingCredits(130)   -> 130 - 36 = 94
+  s2.remainingCredits(130)   -> 130 - 55 = 75
+
+TASK 3 - OverloadDemo
+  enroll("CSC241")      -> Enrolled using course code: CSC241
+  enroll("CSC241", 2)   -> Enrolled in CSC241, section 2
+  enroll(241)           -> Enrolled using numeric code: 241
+  enroll()              -> compile-time error
+  enroll("241", "2")    -> compile-time error
+
+TASK 4 - PassByValueDemo
+  A: Before 10 | Inside Method 99 | After 10
+  B: Before 40 | Inside Method 99 | After 99
+  C: Before Original | Inside Method Temporary | After Original
+
+TASK 5 - AIExperimentDemo
+  Initial: exp1 5/20, exp2 10/25
+  exp1.runEpochs(5)     -> exp1 10/20, exp2 still 10/25
+  exp2.runEpochs(5, 3)  -> exp2 18/25, exp1 still 10/20
+  Remaining: exp1 = 10, exp2 = 7
+  trainMore(exp1, 4)    -> exp1 14/20
